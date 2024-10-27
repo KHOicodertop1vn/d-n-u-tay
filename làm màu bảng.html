@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bảng lớn không border</title>
+    <style>
+      table {
+        width: 400px; /* Độ rộng bảng chiếm toàn bộ màn hình */
+        height: 300px; /* Chiều cao lớn */
+        border-collapse: collapse; /* Bỏ khoảng cách giữa các ô */
+      }
+      th,
+      td {
+        border: none; /* Không có đường viền */
+        padding: 20px; /* Tăng kích thước ô */
+        font-size: 24px; /* Tăng kích thước chữ */
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <div class="bdk">
+          <tr>
+            <th><span></span><span></span><span></span><span></span>Cột 1</th>
+            <th>
+              <span></span><span></span><span></span><span></span><span></span
+              ><span></span>Cột 2
+            </th>
+            <th>
+              <span></span><span></span><span></span><span></span><span></span
+              ><span></span>Cột 3
+            </th>
+          </tr>
+          <tr>
+            <td>
+              <span></span><span></span><span></span><span></span> Hàng 1, Cột 1
+            </td>
+            <td>
+              <span></span><span></span><span></span><span></span><span></span
+              ><span></span> Hàng 1, Cột 2
+            </td>
+            <td>
+              <span></span><span></span><span></span><span></span><span></span
+              ><span></span> Hàng 1, Cột 3
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <span></span><span></span><span></span><span></span> Hàng 2, Cột 1
+            </td>
+            <td>
+              <span></span><span></span><span></span><span></span><span></span
+              ><span></span> Hàng 2, Cột 2
+            </td>
+            <td>
+              <span></span><span></span><span></span><span></span><span></span
+              ><span></span> Hàng 2, Cột 3
+            </td>
+      </div>
+      </tr>
+    </table>
+    <style>
+      table tr span {
+        background-color: brown;
+        display: block;
+        position: absolute;
+        transition: all 1s linear;
+      }
+      table tr {
+        position: relative;
+      }
+      table tr span:nth-child(1) {
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 2px;
+      }
+      table tr span:nth-child(2) {
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 2px;
+      }
+      table tr span:nth-child(3) {
+        top: 0;
+        left: 0;
+        width: 2px;
+        height: 0;
+      }
+      table tr span:nth-child(4) {
+        top: 0;
+        right: 0;
+        width: 2px;
+        height: 0;
+      }
+      table tr span:nth-child(5) {
+        top: 0;
+
+        width: 2px;
+        height: 0;
+      }
+      table tr:hover span:nth-child(1) {
+        width: 100%;
+      }
+      table tr:hover span:nth-child(2) {
+        width: 100%;
+      }
+      table tr:hover span:nth-child(3) {
+        height: 100%;
+      }
+      table tr:hover span:nth-child(4) {
+        height: 100%;
+      }
+      table tr:hover span:nth-child(5) {
+        height: 100%;
+      }
+    </style>
+  </body>
+</html>
